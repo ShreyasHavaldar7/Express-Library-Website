@@ -13,7 +13,8 @@ var compression = require('compression');
 var app = express();
 
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://dbUser:dbUserPass@cluster0-u3g9q.mongodb.net/test?retryWrites=true&w=majority';
+var dev_db_url = 'mongodb+srv://dbUser:dbUserPass@cluster0-u3g9q.mongodb.net/test?retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, {useNewUrlParser: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MDB Connection Error:'));
