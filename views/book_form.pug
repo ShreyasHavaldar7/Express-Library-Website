@@ -18,7 +18,7 @@ block content
             option(value=author._id) #{author.name}
     
     p
-      | Don't find a author that matches? 
+      | Don't find a author that matches?
       a(href = '../author/create') Create New Author!
 
     div.form-group
@@ -36,19 +36,8 @@ block content
             label(for=genre._id) #{genre.name}
 
     p
-      | Don't find a genre that matches? 
+      | Don't find a genre that matches?
       a(href = '../genre/create') Create New Genre!
-
-    button.btn.btn-primary(type='submit') Add
-
-    
-
-    
-
-  if errors 
-    ul
-      for error in errors
-        li!= error.msgCreate New Genre
 
     button.btn.btn-primary(type='submit') Add
 
