@@ -31,6 +31,12 @@ block content
             label(for=genre._id) #{genre.name}
     button.btn.btn-primary(type='submit') Add
 
+    p
+    a(href=genre.url+'/create') Create New Genre
+
+    p
+    a(href=author.url+'/create') Create New Author
+
   if errors 
     ul
       for error in errors
