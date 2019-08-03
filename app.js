@@ -13,7 +13,7 @@ var compression = require('compression');
 var app = express();
 
 var mongoose = require('mongoose');
-var dev_db_url = 'mongodb+srv://dbUser:dbUserPass@cluster0-u3g9q.mongodb.net/test?retryWrites=true&w=majority';
+var dev_db_url = 'mongodb+srv://User1:User1Password@cluster0-bxqpc.azure.mongodb.net/test?retryWrites=true&w=majority';
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, {useNewUrlParser: true});
 var db = mongoose.connection;
